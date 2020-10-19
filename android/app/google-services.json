@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603028162662",
+    "firebase_url": "https://kirkit-3bdee.firebaseio.com",
+    "project_id": "kirkit-3bdee",
+    "storage_bucket": "kirkit-3bdee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603028162662:android:073fbd0a8c54138fd145a7",
+        "android_client_info": {
+          "package_name": "com.overklock.kirkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603028162662-astjtqq6ebe4d7ev3k11r6ssj5in47j6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbvZxLfbtIIN4VKvpNfwYvjFf2CPKHUgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603028162662-astjtqq6ebe4d7ev3k11r6ssj5in47j6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
