@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:kirkit/services/crud.dart';
 import 'package:kirkit/views/create_post.dart';
 
 class HomePage extends StatefulWidget {
@@ -7,6 +9,29 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  QuerySnapshot postSnapshot;
+  Widget PostList(){
+    return Container(
+      child: Column(
+        children: <Widget>[
+          ListView(
+
+          ),
+        ],
+      ),
+    );
+  }
+  CrudMethods crudMethods = CrudMethods();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    crudMethods.getData().then((result) {
+      postSnapshot = result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +59,37 @@ class _HomePageState extends State<HomePage> {
                 }),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PostTile extends StatelessWidget {
+
+  String imgUrl, title;
+  PostTile({@required this.imgUrl,@required this.title});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 150,
+      child: Stack(
+        children: <Widget>[
+          ClipRect(child: Image.network(imgUrl)),
+          Container(
+            height: 150,
+            decoration: BoxDecoration(
+              color: Colors.black45.withOpacity(0.3),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          Container(
+            child: Column(
+              children: <Widget>[
+                Text(title),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

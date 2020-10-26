@@ -44,8 +44,9 @@ class _CreatePostState extends State<CreatePost> {
       "title" : title,
       "content": content,
       };
-      crudMethods.addData(postData);
-      Navigator.pop(context);
+      crudMethods.addData(postData).then((result) {
+        Navigator.pop(context);
+      });
     } else {
       print('Image is not selected');
     }
